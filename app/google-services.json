@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "1094672198076",
+    "firebase_url": "https://healr-11b95.firebaseio.com",
+    "project_id": "healr-11b95",
+    "storage_bucket": "healr-11b95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094672198076:android:90d126967dd579d1",
+        "android_client_info": {
+          "package_name": "es.esy.practikality.healr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094672198076-5mvlmhb7apv4kqaeu8cfnn0sr6a1m3ka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.esy.practikality.healr",
+            "certificate_hash": "61b2c432a113c8db1d07e6ecfcd9658dffdc6cb3"
+          }
+        },
+        {
+          "client_id": "1094672198076-pd2t3jnnmdd5ckfsb2ahvrrit4s0gvei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.esy.practikality.healr",
+            "certificate_hash": "eb187f06109218e369bcb2685d2826b88cc0384a"
+          }
+        },
+        {
+          "client_id": "1094672198076-vblg692eb3rvhnmtcr6c5qlut541r5ei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-4ZoSxP8dAENNi4BiM7BdlL2sVUC0LRM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094672198076-vblg692eb3rvhnmtcr6c5qlut541r5ei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

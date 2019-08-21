@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="es.esy.practikality.healr.MainActivity">
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/arnabsagar"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/healrtextmainscreen"
+        android:layout_marginTop="80dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Sign up"
+        app:cornerRadius="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotoSignUp"
+        android:elevation="10dp"
+        app:rippleColor="#ffff"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Log in"
+        app:cornerRadius="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="goto_Login"
+        android:elevation="10dp"
+        app:rippleColor="#ffff"/>
+</RelativeLayout>

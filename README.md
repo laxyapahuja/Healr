@@ -1,2 +1,2 @@
-# healr
-Because drugs deserve a second chance too.
+# healr.
+because drugs deserve a second chance too.
