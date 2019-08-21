@@ -13,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="96dp"
             android:layout_marginTop="20dp"
             android:id="@+id/healrpickuptext"
-            android:background="@drawable/healrpickup"
+            android:background="@drawable/healrlogowithtextwhite_small"
             android:layout_centerHorizontal="true"/>
+
         <ImageView
             android:id="@+id/select_text"
             android:layout_below="@id/healrpickuptext"
@@ -27,6 +28,7 @@
             android:src="@drawable/select_pickup_destination"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"/>
+
         <Button
             android:id="@+id/current_loc"
             android:hint="Current Location"
@@ -34,7 +36,7 @@
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/curentloc_butt2"
+            android:backgroundTint="@color/colorPrimary"
             android:layout_below="@id/select_text"
             android:layout_centerHorizontal="true"
             android:onClick="goto_PlacePicker"/>
@@ -46,18 +48,17 @@
             android:layout_centerHorizontal="true"
             android:src ="@drawable/select_pickup_date"
             android:layout_marginTop="20dp"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/select_date"
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/date_text"
-            android:textAllCaps="false"
             android:textSize="18dp"
             android:hint="Select Date"
-            android:background="@drawable/select_date_butt"/>
-        <Button
+            android:backgroundTint="@color/colorPrimary"/>
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/select_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,7 +68,7 @@
             android:textSize="18dp"
             android:hint="Select Time"
             android:layout_marginTop="10dp"
-            android:background="@drawable/select_date_butt"/>
+            android:backgroundTint="@color/colorPrimary"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></LinearLayout>
@@ -96,9 +97,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-1dp"
             android:background="#fff"
-            android:backgroundTint="#ffff"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="confirm"
-            android:src="@drawable/confirm_pickup_butt"
             android:text="Confirm"
             android:textColor="@color/colorAccent" />
 

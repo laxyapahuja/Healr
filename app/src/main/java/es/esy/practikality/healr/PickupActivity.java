@@ -48,7 +48,7 @@ public class PickupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pickup);
-        TextView buyitfor = (TextView) findViewById(R.id.buyitfor);
+        TextView buyitfor = findViewById(R.id.buyitfor);
         MaterialButton confirm =  findViewById(R.id.confirmpickupbtn);
         buyitfor.setAlpha(0.0f);
         confirm.setAlpha(0.0f);

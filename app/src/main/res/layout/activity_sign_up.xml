@@ -52,7 +52,7 @@
                 app:boxCornerRadiusBottomStart="5dp"
                 app:boxCornerRadiusTopEnd="5dp"
                 app:boxCornerRadiusTopStart="5dp"
-                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeColor="#000"
                 app:boxStrokeWidth="1dp"
                 app:hintEnabled="true"
                 >
@@ -80,7 +80,7 @@
                 app:boxCornerRadiusBottomStart="5dp"
                 app:boxCornerRadiusTopEnd="5dp"
                 app:boxCornerRadiusTopStart="5dp"
-                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeColor="#000"
                 app:boxStrokeWidth="1dp"
                 app:hintEnabled="true">
 
@@ -109,7 +109,7 @@
                 app:boxCornerRadiusBottomStart="5dp"
                 app:boxCornerRadiusTopEnd="5dp"
                 app:boxCornerRadiusTopStart="5dp"
-                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeColor="#000"
                 app:boxStrokeWidth="1dp"
                 app:hintEnabled="true"
                >
@@ -162,7 +162,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/productsans_bold"
         android:text="Already have an account? Log in"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:onClick="goto_Login"/>
 

@@ -4,32 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="@drawable/startscreenbgx"
     tools:context="es.esy.practikality.healr.MainActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/logoLinearLayout">
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/healr"
+            android:layout_width="250dp"
+            android:layout_height="96dp"
+            android:background="@drawable/healrlogowithtextsmall"
             android:paddingEnd="15dp"
-            android:layout_marginTop="8dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/productsans"
-            android:paddingStart="5dp"
-            android:text="healr."
-            android:textColor="#000"
-            android:textSize="60sp" />
-    </LinearLayout>
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="wrap_content"

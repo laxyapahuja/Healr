@@ -4,36 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff"
+    android:background="#FFF"
     tools:context="es.esy.practikality.healr.MediActivity">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/logoLinearLayout">
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/healr"
-            android:paddingEnd="15dp"
-            android:layout_marginTop="8dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/productsans"
-            android:paddingStart="5dp"
-            android:text="healr."
-            android:textColor="#000"
-            android:textSize="60sp" />
-    </LinearLayout>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="96dp"
+        android:background="@drawable/healrlogowithtextsmall"
+        android:paddingEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/healr_logo"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logoLinearLayout"
+        android:layout_below="@id/healr_logo"
         android:fontFamily="@font/productsans"
         android:layout_marginLeft="210dp"
         android:layout_marginTop="-21dp"
@@ -43,7 +30,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logoLinearLayout"
+        android:layout_below="@id/healr_logo"
         android:background="@drawable/adddrugimg"
         android:layout_centerHorizontal="true"
         android:id="@+id/add_drug"
@@ -62,7 +49,7 @@
         android:layout_marginTop="24dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="30dp"
-        android:background="@drawable/arrow"/>
+        android:background="@drawable/ic_arrow_drop_down_black_24dp"/>
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="35dp"

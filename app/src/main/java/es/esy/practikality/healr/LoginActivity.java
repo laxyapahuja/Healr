@@ -62,4 +62,9 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(context,text,duration).show();
     }
 
+    public void goToSignUp(View view) {
+        Intent intent1 = new Intent(getApplicationContext(), SignUpActivity.class);
+        startActivity(intent1);
+    }
+
 }

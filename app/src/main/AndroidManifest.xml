@@ -70,7 +70,6 @@
         <activity
             android:name=".MediActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".CollabActivity"></activity>
         <activity android:name=".RemindActivity"></activity>
     </application>
 

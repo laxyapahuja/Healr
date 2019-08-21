@@ -135,9 +135,9 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/productsans_bold"
         android:text="Don't have an account? Sign up"
-        android:textColor="#ffff"
+        android:textColor="@color/colorAccent"
         android:textSize="18sp"
-        />
+        android:onClick="goToSignUp"/>
 
 
 </RelativeLayout>
