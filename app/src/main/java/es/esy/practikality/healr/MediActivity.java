@@ -5,7 +5,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -13,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MediActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     double cost = 0;
@@ -27,8 +33,31 @@ public class MediActivity extends AppCompatActivity implements AdapterView.OnIte
         R.array.drugs_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
         spinner.setOnItemSelectedListener(this);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch(menuItem.getItemId()){
+                    case R.id.action_pickup:
+                        Toast.makeText(MediActivity.this, "Already on Pickup", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_collab:
+                        startActivity(new Intent(getApplicationContext(), CollabActivity.class));
+                        break;
+                    case R.id.action_profile:
+                        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                        break;
+                    case R.id.action_remind:
+                        startActivity(new Intent(getApplicationContext(), RemindActivity.class));
+                        break;
+
+                }
+
+                return true;
+            }
+        });
     }
     public void goToAddress(View view){
         SharedPreferences sharedPref = getSharedPreferences("Healr",Context.MODE_PRIVATE);
@@ -111,27 +140,6 @@ public class MediActivity extends AppCompatActivity implements AdapterView.OnIte
                 cost += 4.5;
             }
         }
-    }
-    public void gotoPickup(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), MediActivity.class);
-        startActivity(intent1);
-    }
-
-
-    public void goToCollab(View view) {
-        String url = "http://arnabsagar.typeform.com/to/mJOJAV";
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
-    }
-
-    public void goToRemind(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), RemindActivity.class);
-        startActivity(intent1);
-    }
-    public void goToProfile(View view){
-        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent1);
     }
 
     public void onNothingSelected(AdapterView<?> parent) {

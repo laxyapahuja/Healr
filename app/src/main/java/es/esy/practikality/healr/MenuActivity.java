@@ -98,24 +98,6 @@ public class MenuActivity extends AppCompatActivity {
         });
     }
 
-    public void gotoPickup(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), MediActivity.class);
-        startActivity(intent1);
-    }
-
-
-    public void goToCollab(View view) {
-        String url = "http://arnabsagar.typeform.com/to/mJOJAV";
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
-    }
-
-    public void goToRemind(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), RemindActivity.class);
-        startActivity(intent1);
-    }
-
     private static final int GALLERY_REQUEST = 1;
 
 

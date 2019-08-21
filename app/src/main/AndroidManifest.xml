@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".CollabActivity"></activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,6 +33,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAxrL5ahmdQB7LRNBgS323dJl25hDIBQNI" />
+
+        <activity
+            android:name=".CollabActivity"></activity>
 
         <activity
             android:name=".MapsActivity"
