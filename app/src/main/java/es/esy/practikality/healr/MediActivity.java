@@ -126,7 +126,7 @@ public class MediActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void goToRemind(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), remind.class);
+        Intent intent1 = new Intent(getApplicationContext(), RemindActivity.class);
         startActivity(intent1);
     }
     public void goToProfile(View view){

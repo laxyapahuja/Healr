@@ -188,7 +188,7 @@ public class PickupActivity extends AppCompatActivity {
         myRef.child("Scheduled").child(userName).setValue(valuefinal);
         valuefinal="";
         makeToast("Pickup Confirmed");
-        Intent intent1 = new Intent(getApplicationContext(),Menu.class);
+        Intent intent1 = new Intent(getApplicationContext(), MenuActivity.class);
         startActivity(intent1);
     }
 
@@ -200,7 +200,7 @@ public class PickupActivity extends AppCompatActivity {
     }
 
     public void goToRemind(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), remind.class);
+        Intent intent1 = new Intent(getApplicationContext(), RemindActivity.class);
         startActivity(intent1);
     }
 

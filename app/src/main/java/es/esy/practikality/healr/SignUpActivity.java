@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 
-public class SignUp extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class SignUp extends AppCompatActivity {
                 editor.apply();
                 makeToast("Account Created. Welcome to Healr!");
 
-                Intent intent1 = new Intent(getApplicationContext(),login.class);
+                Intent intent1 = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent1);
             }
         }else{
@@ -57,7 +57,7 @@ public class SignUp extends AppCompatActivity {
         Toast.makeText(context,text,duration).show();
     }
     public void goto_Login(View view){
-        Intent intentt =new Intent(getApplicationContext(), login.class);
+        Intent intentt =new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intentt);
     }
 

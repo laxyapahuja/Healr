@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-public class login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class login extends AppCompatActivity {
                 editor.putBoolean("loggedIn",true);
                 editor.putString("currentUserName",usernames[k]);
                 editor.apply();
-                Intent intent1 = new Intent(getApplicationContext(),Menu.class);
+                Intent intent1 = new Intent(getApplicationContext(), MenuActivity.class);
                intent1.putExtra("username", usernames[k]);
                startActivity(intent1);
             }else{

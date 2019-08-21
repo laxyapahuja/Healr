@@ -20,7 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class remind extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class RemindActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     String selectedpub = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class remind extends AppCompatActivity implements AdapterView.OnItemSelec
             DatabaseReference myRef = database.getReference();
             myRef.child("Reminders").child(user).setValue(selectedpub + " on " + date);
             makeToast("Reminder Saved. You'll be reminded with 1-2 business days of the date you've saved.");
-            Intent intent1 = new Intent(getApplicationContext(),Menu.class);
+            Intent intent1 = new Intent(getApplicationContext(), MenuActivity.class);
             startActivity(intent1);
         }else{
             makeToast("Wrong input format. Required format: mmyy");
@@ -84,7 +84,7 @@ public class remind extends AppCompatActivity implements AdapterView.OnItemSelec
     }
 
     public void goToRemind(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), remind.class);
+        Intent intent1 = new Intent(getApplicationContext(), RemindActivity.class);
         startActivity(intent1);
     }
     public void goToProfile(View view){

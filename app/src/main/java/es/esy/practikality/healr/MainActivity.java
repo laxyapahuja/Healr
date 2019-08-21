@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoSignUp(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), SignUp.class);
+        Intent intent1 = new Intent(getApplicationContext(), SignUpActivity.class);
         startActivity(intent1);
     }
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goto_Login(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), login.class);
+        Intent intent1 = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent1);
     }
 }

@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Menu extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
     TextView usertv;
     ImageView userprofile;
 
@@ -26,9 +26,7 @@ public class Menu extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences("Healr", Context.MODE_PRIVATE);
         int earnedTillNow = sharedPref.getInt("totalEarned", 0);
         String userName = sharedPref.getString("currentUserName", "");
-        String userEmail = sharedPref.getString("currentUserEmail", "");
-        TextView tv1 = findViewById(R.id.usernamelogin);
-        TextView tv2 = findViewById(R.id.useremaillogin);
+        String userEmail = sharedPref.getString("currentUserEmail", "");;
         TextView tv3 = findViewById(R.id.earnedtillnow);
         tv3.setText(String.valueOf(earnedTillNow));
         TextView historytxt = (TextView) findViewById(R.id.historytext);
@@ -81,7 +79,7 @@ public class Menu extends AppCompatActivity {
     }
 
     public void goToRemind(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), remind.class);
+        Intent intent1 = new Intent(getApplicationContext(), RemindActivity.class);
         startActivity(intent1);
     }
 

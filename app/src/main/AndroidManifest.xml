@@ -48,7 +48,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUp"
+            android:name=".SignUpActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".PickupActivity"
@@ -62,18 +62,16 @@
             android:value="barcode" />
 
         <activity
-            android:name=".login"
+            android:name=".LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Menu"
+            android:name=".MenuActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MediActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".Profileanother"></activity>
-        <activity android:name=".Webviewact"></activity>
-        <activity android:name=".remind"></activity>
+        <activity android:name=".CollabActivity"></activity>
+        <activity android:name=".RemindActivity"></activity>
     </application>
 
 </manifest>
