@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -101,64 +102,16 @@
             android:text="Confirm"
             android:textColor="@color/colorAccent" />
 
-
-
-
     </RelativeLayout>
     </ScrollView>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <com.google.android.material.card.MaterialCardView
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation"
+        android:id="@+id/bottom_nav"
         android:layout_alignParentBottom="true"
-        android:elevation="7dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            android:background="#fff">
-            <LinearLayout
-                android:layout_width="92dp"
-                android:layout_height="92dp"
-                android:background="@color/colorPrimaryDark">
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_weight="1"
-                    android:paddingTop="6dp"
-                    android:onClick="gotoPickup"
-                    android:src="@drawable/pickup" />
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_weight="1"
-                android:onClick="goToRemind"
-                android:src="@drawable/remind" />
-
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_weight="1"
-                android:onClick="goToCollab"
-                android:src="@drawable/collab" />
-
-
-
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_weight="1"
-                android:src="@drawable/profile"
-                android:onClick="goToProfile"/>
-
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-    </RelativeLayout>
-</LinearLayout>
+        android:backgroundTint="#fff"
+        app:itemTextColor="#000"
+        app:itemIconTint="#000"/>
+</RelativeLayout>

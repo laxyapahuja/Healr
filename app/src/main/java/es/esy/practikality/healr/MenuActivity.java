@@ -4,12 +4,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MenuActivity extends AppCompatActivity {
     TextView usertv;
@@ -63,6 +69,34 @@ public class MenuActivity extends AppCompatActivity {
         } else {
             System.out.println("khaali hai");
         }
+
+        // bottom navbar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch(menuItem.getItemId()){
+                    case R.id.action_pickup:
+                        startActivity(new Intent(getApplicationContext(), PickupActivity.class));
+                        break;
+                    case R.id.action_collab:
+                        String url = "http://arnabsagar.typeform.com/to/mJOJAV";
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+                        break;
+                    case R.id.action_profile:
+                        Toast.makeText(MenuActivity.this, "Already on Profile", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_remind:
+                        startActivity(new Intent(getApplicationContext(), RemindActivity.class));
+                        break;
+
+                }
+
+                return true;
+            }
+        });
     }
 
     public void gotoPickup(View view) {

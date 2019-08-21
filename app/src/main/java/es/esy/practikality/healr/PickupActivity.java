@@ -10,15 +10,20 @@ import android.icu.util.Calendar;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -56,6 +61,33 @@ public class PickupActivity extends AppCompatActivity {
         dialog_OnButtonClick();
         showTimePickerDialog();
         Calendar dateTime = Calendar.getInstance();
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch(menuItem.getItemId()){
+                    case R.id.action_pickup:
+                        Toast.makeText(PickupActivity.this, "Already on Pickup", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_collab:
+                        String url = "http://arnabsagar.typeform.com/to/mJOJAV";
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+                        break;
+                    case R.id.action_profile:
+                        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                        break;
+                    case R.id.action_remind:
+                        startActivity(new Intent(getApplicationContext(), RemindActivity.class));
+                        break;
+
+                }
+
+                return true;
+            }
+        });
 
     }
 

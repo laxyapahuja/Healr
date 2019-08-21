@@ -5,12 +5,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -32,6 +36,34 @@ public class RemindActivity extends AppCompatActivity implements AdapterView.OnI
                 R.array.drugs_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        // bottom navbar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch(menuItem.getItemId()){
+                    case R.id.action_pickup:
+                        startActivity(new Intent(getApplicationContext(), PickupActivity.class));
+                        break;
+                    case R.id.action_collab:
+                        String url = "http://arnabsagar.typeform.com/to/mJOJAV";
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+                        break;
+                    case R.id.action_profile:
+                        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                        break;
+                    case R.id.action_remind:
+                        Toast.makeText(RemindActivity.this, "Already on Remind", Toast.LENGTH_SHORT).show();
+                        break;
+
+                }
+
+                return true;
+            }
+        });
 
     }
     public void onItemSelected(AdapterView<?> parent, View view,

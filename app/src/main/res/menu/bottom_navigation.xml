@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_pickup"
+        android:title="Pickup"
+        android:icon="@drawable/pickup_icon"/>
+
+    <item
+        android:id="@+id/action_collab"
+        android:title="Collab"
+        android:icon="@drawable/collab_icon"/>
+
+    <item
+        android:id="@+id/action_remind"
+        android:title="Remind"
+        android:icon="@drawable/remind_icon"/>
+
+    <item
+        android:id="@+id/action_profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+
+</menu>
