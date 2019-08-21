@@ -56,9 +56,9 @@
         android:layout_below="@id/add_drug_remind"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:backgroundTint="#000"
         android:gravity="center"
-        android:popupBackground="#ffffff"
+        android:popupBackground="#000000"
         android:spinnerMode="dropdown"></Spinner>
 
     <TextView

@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/heal-r.iml" filepath="$PROJECT_DIR$/.idea/heal-r.iml" />
+      <module fileurl="file://$PROJECT_DIR$/healr.iml" filepath="$PROJECT_DIR$/healr.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/healr.iml" filepath="$PROJECT_DIR$/.idea/healr.iml" />
     </modules>
   </component>

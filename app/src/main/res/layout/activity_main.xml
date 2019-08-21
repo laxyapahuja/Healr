@@ -4,43 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="#fff"
     tools:context="es.esy.practikality.healr.MainActivity">
-    <pl.droidsonroids.gif.GifTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/arnabsagar"/>
-    <ImageView
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/healrtextmainscreen"
-        android:layout_marginTop="80dp"/>
+        android:id="@+id/logoLinearLayout">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/healr"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/productsans"
+            android:paddingStart="5dp"
+            android:text="healr."
+            android:textColor="#000"
+            android:textSize="60sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Because drugs deserve a second chance too."
+        android:textColor="#000"
+        android:fontFamily="@font/productsans"
+        android:layout_marginTop="185dp"
+        android:layout_centerHorizontal="true"/>
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="400dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="Sign up"
-        app:cornerRadius="10dp"
+        app:cornerRadius="5dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="gotoSignUp"
-        android:elevation="10dp"
-        app:rippleColor="#ffff"/>
+        android:elevation="5dp"
+        app:rippleColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:fontFamily="@font/productsans_bold"/>
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="90dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="325dp"
+        android:backgroundTint="@color/colorPrimary"
         android:text="Log in"
-        app:cornerRadius="10dp"
+        app:cornerRadius="5dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="goto_Login"
-        android:elevation="10dp"
-        app:rippleColor="#ffff"/>
+        android:elevation="5dp"
+        app:rippleColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:fontFamily="@font/productsans_bold"/>
 </RelativeLayout>

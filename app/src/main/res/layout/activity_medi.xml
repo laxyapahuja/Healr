@@ -6,31 +6,44 @@
     android:layout_height="match_parent"
     android:background="#ffff"
     tools:context="es.esy.practikality.healr.MediActivity">
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Healr."
-        android:fontFamily="@font/productsans_bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="60sp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/healr_pickup"
-        android:layout_marginTop="30dp"/>
+        android:id="@+id/logoLinearLayout">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/healr"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/productsans"
+            android:paddingStart="5dp"
+            android:text="healr."
+            android:textColor="#000"
+            android:textSize="60sp" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/healr_pickup"
+        android:layout_below="@id/logoLinearLayout"
         android:fontFamily="@font/productsans"
         android:layout_marginLeft="210dp"
         android:layout_marginTop="-21dp"
         android:text="Pickup"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#000"
         android:textSize="25dp" />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/healr_pickup"
+        android:layout_below="@id/logoLinearLayout"
         android:background="@drawable/adddrugimg"
         android:layout_centerHorizontal="true"
         android:id="@+id/add_drug"
