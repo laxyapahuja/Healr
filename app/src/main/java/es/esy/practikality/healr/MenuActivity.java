@@ -80,9 +80,8 @@ public class MenuActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MediActivity.class));
                         break;
                     case R.id.action_collab:
-                        String url = "http://arnabsagar.typeform.com/to/mJOJAV";
+                        startActivity(new Intent(MenuActivity.this, CollabActivity.class));
                         Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(url));
                         startActivity(i);
                         break;
                     case R.id.action_profile:

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollabActivity"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/head">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="96dp"
+            android:background="@drawable/healrlogowithtextsmall"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/healr_logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Collab"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/productsans"
+            android:id="@+id/collab" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head"
+        android:layout_marginTop="45dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/text"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head"
+            android:text="Work With Us."
+            android:fontFamily="@font/productsans_bold"
+            android:textColor="#000"
+            android:textSize="31dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In case you want to collaborate with us and expand mutually, you can contact us by filling the form below.
+ \nWe will try our best to revert as soon as possible"
+            android:fontFamily="@font/productsans"
+            android:textColor="#000"
+            android:textSize="17dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name of Company"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColorHint="#E44D26"
+            android:layout_marginTop="20dp"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxStrokeColor="#E44D26"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColorHint="#E44D26"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxStrokeColor="#E44D26"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true"
+            >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:textColor="#000"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColorHint="#E44D26"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxStrokeColor="#E44D26"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Message"
+                android:inputType="text"
+                android:textColor="#000"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Send"
+        android:layout_below="@id/text"
+        android:layout_alignEnd="@id/text"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:elevation="7dp"
+        android:id="@+id/send"/>
+
+
+
+
+</RelativeLayout>
