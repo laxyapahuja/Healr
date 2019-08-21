@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pickup_back">
+    android:background="#FFF">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,83 +17,178 @@
             android:layout_height="96dp"
             android:layout_marginTop="20dp"
             android:id="@+id/healrpickuptext"
-            android:background="@drawable/healrlogowithtextwhite_small"
+            android:background="@drawable/healrlogowithtextsmall"
             android:layout_centerHorizontal="true"/>
 
-        <ImageView
-            android:id="@+id/select_text"
-            android:layout_below="@id/healrpickuptext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/select_pickup_destination"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
-
-        <Button
-            android:id="@+id/current_loc"
-            android:hint="Current Location"
-            android:fontFamily="sans-serif"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_below="@id/select_text"
-            android:layout_centerHorizontal="true"
-            android:onClick="goto_PlacePicker"/>
-        <ImageView
-            android:id="@+id/date_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/current_loc"
-            android:layout_centerHorizontal="true"
-            android:src ="@drawable/select_pickup_date"
-            android:layout_marginTop="20dp"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/select_date"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/date_text"
-            android:textSize="18dp"
-            android:hint="Select Date"
-            android:backgroundTint="@color/colorPrimary"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/select_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/select_date"
-            android:textAllCaps="false"
-            android:textSize="18dp"
-            android:hint="Select Time"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimary"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/select_time"
-            android:background="@drawable/buyitfor"
-            android:gravity="center"
-            android:fontFamily="sans-serif"
-            android:textColor="@android:color/black"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingTop="19dp"
-            android:paddingRight="74dp"
-            android:layout_marginTop="30dp"
-            android:id="@+id/buyitfor"/>
+            android:text="Enter your address"
+            android:fontFamily="@font/productsans_bold"
+            android:textColor="#000"
+            android:layout_below="@id/healrpickuptext"
+            android:id="@+id/select_text"
+            android:textSize="30sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/select_text"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/LocationLayout">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter address"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/colorPrimary"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxStrokeWidth="1dp"
+            app:hintEnabled="true"
+            android:layout_below="@id/select_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:inputType="textEmailAddress"
+                android:id="@+id/EnterAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_my_location_black_24dp"
+                android:layout_marginTop="7dp"
+                android:onClick="goto_PlacePicker"
+                android:id="@+id/current_loc"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Dropoff"
+            android:fontFamily="@font/productsans_bold"
+            android:textColor="#000"
+            android:layout_below="@id/LocationLayout"
+            android:id="@+id/date_text"
+            android:textSize="30sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/date_text"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/DateLayout">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date (dd/mm)"
+                android:paddingStart="10dp"
+                android:textColorHint="@color/colorPrimary"
+                app:boxCornerRadiusBottomEnd="5dp"
+                app:boxCornerRadiusBottomStart="5dp"
+                app:boxCornerRadiusTopEnd="5dp"
+                app:boxCornerRadiusTopStart="5dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1dp"
+                app:hintEnabled="true"
+                android:layout_below="@id/select_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/DropoffDate" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_calendar_today_black_18dp"
+                android:layout_marginTop="7dp"
+                android:onClick="goto_PlacePicker"
+                android:id="@+id/select_date"
+                android:tint="@color/colorPrimary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nearby Pickup Stations"
+            android:fontFamily="@font/productsans_bold"
+            android:textColor="#000"
+            android:layout_below="@id/DateLayout"
+            android:id="@+id/nearby_text"
+            android:textSize="30sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/nearby"
+            android:layout_below="@id/nearby_text"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chemists"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Chemist"
+                    android:textColor="#000"
+                    android:fontFamily="@font/productsans_bold"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chemists"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chemists" />
+        </LinearLayout>
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/confirmpickupbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buyitfor"
+            android:layout_below="@+id/nearby"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-1dp"
             android:background="#fff"

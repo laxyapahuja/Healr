@@ -44,7 +44,7 @@ public class RemindActivity extends AppCompatActivity implements AdapterView.OnI
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch(menuItem.getItemId()){
                     case R.id.action_pickup:
-                        startActivity(new Intent(getApplicationContext(), PickupActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MediActivity.class));
                         break;
                     case R.id.action_collab:
                         String url = "http://arnabsagar.typeform.com/to/mJOJAV";

@@ -6,6 +6,8 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.icu.util.Calendar;
 import android.net.Uri;
 import android.os.Build;
@@ -18,6 +20,7 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,6 +31,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -35,8 +39,9 @@ import android.widget.Toast;
 
 public class PickupActivity extends AppCompatActivity {
     String valuefinal = "";
-    Button btn;
+    ImageView btn;
     Button btn_time;
+    TextInputEditText DropoffDate, EnterAddress;
     int year_x, month_x, day_x, hour_x, minute_x;
     static final int DIALOG_ID = 0;
     static final int DIALOG_ID1 = 1;
@@ -48,19 +53,20 @@ public class PickupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pickup);
-        TextView buyitfor = findViewById(R.id.buyitfor);
+        //TextView buyitfor = findViewById(R.id.buyitfor);
         MaterialButton confirm =  findViewById(R.id.confirmpickupbtn);
-        buyitfor.setAlpha(0.0f);
-        confirm.setAlpha(0.0f);
+        //buyitfor.setAlpha(0.0f);
+        //confirm.setAlpha(0.0f);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         final Calendar cal = Calendar.getInstance();
-
         year_x = cal.get(Calendar.YEAR);
         month_x = cal.get(Calendar.MONTH);
         day_x = cal.get(Calendar.DAY_OF_YEAR);
         dialog_OnButtonClick();
-        showTimePickerDialog();
+        //showTimePickerDialog();
         Calendar dateTime = Calendar.getInstance();
+        DropoffDate = findViewById(R.id.DropoffDate);
+        EnterAddress = findViewById(R.id.EnterAddress);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -68,7 +74,7 @@ public class PickupActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch(menuItem.getItemId()){
                     case R.id.action_pickup:
-                        Toast.makeText(PickupActivity.this, "Already on Pickup", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), MediActivity.class));
                         break;
                     case R.id.action_collab:
                         String url = "http://arnabsagar.typeform.com/to/mJOJAV";
@@ -88,11 +94,10 @@ public class PickupActivity extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 
     public void dialog_OnButtonClick() {
-        btn = (Button) findViewById(R.id.select_date);
+        btn = findViewById(R.id.select_date);
         btn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -105,7 +110,7 @@ public class PickupActivity extends AppCompatActivity {
         );
     }
 
-    public void showTimePickerDialog() {
+    /*public void showTimePickerDialog() {
         btn_time = (Button) findViewById(R.id.select_time);
         btn_time.setOnClickListener(
 
@@ -117,7 +122,7 @@ public class PickupActivity extends AppCompatActivity {
                     }
                 }
         );
-    }
+    }*/
 
     @Override
     public Dialog onCreateDialog(int id) {
@@ -149,7 +154,7 @@ public class PickupActivity extends AppCompatActivity {
             month_x=month+1;
             day_x=dayOfMonth;
             makeToast(String.valueOf(day_x)+"/"+String.valueOf(month_x)+"/"+String.valueOf(year_x));
-            btn.setText(String.valueOf(day_x)+"/"+String.valueOf(month_x)+"/"+String.valueOf(year_x));
+            DropoffDate.setText(String.valueOf(day_x)+"/"+String.valueOf(month_x)+"/"+String.valueOf(year_x));
             valuefinal += String.valueOf(day_x)+"/"+String.valueOf(month_x)+"/"+String.valueOf(year_x);
             SharedPreferences sharedPref = getSharedPreferences("Healr", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPref.edit();
@@ -188,15 +193,15 @@ public class PickupActivity extends AppCompatActivity {
 
         String name = placeSelected.getName().toString();
         String address = placeSelected.getAddress().toString();
-        Button enterCurrentLocation = (Button) findViewById(R.id.current_loc);
-        enterCurrentLocation.setText(name);
+        ImageView enterCurrentLocation =  findViewById(R.id.current_loc);
+        EnterAddress.setText(name);
         valuefinal = name + " " + address;
     }
 
 
 
 
-    public void setVisible() {
+    /*public void setVisible() {
         SharedPreferences sharedPref = getSharedPreferences("Healr",Context.MODE_PRIVATE);
         TextView buyitfortv = (TextView) findViewById(R.id.buyitfor);
         MaterialButton confirmtv = (MaterialButton) findViewById(R.id.confirmpickupbtn);
@@ -207,15 +212,15 @@ public class PickupActivity extends AppCompatActivity {
         editor.apply();
         buyitfortv.setAlpha(1.0f);
         confirmtv.setAlpha(1.0f);
-    }
+    }*/
     public void confirm(View view){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
         SharedPreferences sharedPref = getSharedPreferences("Healr",Context.MODE_PRIVATE);
         String userName = sharedPref.getString("currentUserName","NoName");
         String toTake = sharedPref.getString("orderednow","noorders");
-        Button btn = (Button) findViewById(R.id.select_time);
-        valuefinal += " " + btn.getText().toString();
+        //Button btn = (Button) findViewById(R.id.select_time);
+        //valuefinal += " " + btn.getText().toString();
         valuefinal += " toTake: " + toTake;
         myRef.child("Scheduled").child(userName).setValue(valuefinal);
         valuefinal="";
