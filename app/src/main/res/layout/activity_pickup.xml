@@ -180,16 +180,60 @@
 
             </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/chemists"
-                android:layout_marginEnd="10dp"/>
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chemists1"/>
 
-            <ImageView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anytime Chemist"
+                    android:textColor="#000"
+                    android:fontFamily="@font/productsans_bold"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kamlanagar"
+                    android:textColor="#000"
+                    android:fontFamily="@font/productsans"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/chemists" />
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chemists2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jitadopls"
+                    android:textColor="#000"
+                    android:fontFamily="@font/productsans_bold"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tech Syndicate"
+                    android:textColor="#000"
+                    android:fontFamily="@font/productsans"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
         </LinearLayout>
 
 
@@ -199,7 +243,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/nearby"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="-1dp"
+            android:layout_marginTop="2dp"
             android:background="#fff"
             android:backgroundTint="@color/colorPrimary"
             android:onClick="confirm"

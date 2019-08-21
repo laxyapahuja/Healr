@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="#fff"
-    tools:context="es.esy.practikality.healr.MenuActivity">
+    android:background="#fff"
+    tools:context="es.esy.practikality.healr.MenuActivity"
+    android:onClick="addImage">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -13,30 +14,130 @@ android:background="#fff"
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#fff">
 
             <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="530dp"
+                android:src="@drawable/kabir"
+                android:id="@+id/userprofile"
+                android:layout_alignParentTop="true"
+                android:onClick="addImage"/>
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_calendar_today_black_18dp"
-                android:id="@+id/userprofile"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="310dp"
-        android:fontFamily="@font/productsans"
-        android:textSize="25sp"
-        android:textColor="#000000"
-        android:id="@+id/usertv"
-        android:text="Username"/>
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/productsans_bold"
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:id="@+id/usertv"
+                android:text="Rachit Kumar"
+                android:layout_below="@id/userprofile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/productsans"
+                android:textSize="20sp"
+                android:textColor="@color/cardview_dark_background"
+                android:id="@+id/userloc"
+                android:text="New Delhi, India"
+                android:layout_below="@id/usertv"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/userloc"
+                android:id="@+id/stats"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="41"
+                        android:textColor="#000"
+                        android:fontFamily="@font/productsans_bold"
+                        android:textSize="30sp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="orders"
+                        android:fontFamily="@font/productsans"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="41"
+                        android:textColor="#000"
+                        android:fontFamily="@font/productsans_bold"
+                        android:textSize="30sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/earnedtillnow"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="credits"
+                        android:fontFamily="@font/productsans"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="41"
+                        android:textColor="#000"
+                        android:fontFamily="@font/productsans_bold"
+                        android:textSize="30sp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="donations"
+                        android:fontFamily="@font/productsans"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/emaillayoutlogin"
+        android:layout_below="@id/stats"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="70dp"
         android:background="#fff"
@@ -51,7 +152,7 @@ android:background="#fff"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:fontFamily="sans-serif-condensed"
+                android:fontFamily="@font/productsans_bold"
                 android:paddingLeft="25dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
@@ -62,7 +163,7 @@ android:background="#fff"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif-condensed"
+                android:fontFamily="@font/productsans_bold"
                 android:paddingTop="5dp"
                 android:paddingRight="25dp"
                 android:paddingBottom="5dp"
@@ -81,7 +182,7 @@ android:background="#fff"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:fontFamily="cursive"
+                android:fontFamily="@font/productsans"
                 android:paddingLeft="25dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="80dp"
@@ -93,7 +194,7 @@ android:background="#fff"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="cursive"
+                android:fontFamily="@font/productsans"
                 android:paddingTop="5dp"
                 android:paddingRight="25dp"
                 android:paddingBottom="5dp"
@@ -104,48 +205,6 @@ android:background="#fff"
         </LinearLayout>
     </LinearLayout>
 
-
-
-    <RelativeLayout
-        android:id="@+id/namelayoutlogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/earnedtillnow"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/earnedtillnow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:paddingBottom="5sp"
-        android:text="23232"
-        android:textAlignment="center"
-        android:textColor="#000"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <RelativeLayout
-        android:id="@+id/emaillayoutlogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/namelayoutlogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-
-    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/firstmenurow"
@@ -164,7 +223,9 @@ android:background="#fff"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
         android:orientation="horizontal" />
+
         </RelativeLayout>
+
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

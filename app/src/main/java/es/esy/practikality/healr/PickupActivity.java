@@ -46,6 +46,7 @@ public class PickupActivity extends AppCompatActivity {
     static final int DIALOG_ID = 0;
     static final int DIALOG_ID1 = 1;
     private final int REQUEST_CODE_PLACEPICKER = 1;
+    int orders;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -67,6 +68,7 @@ public class PickupActivity extends AppCompatActivity {
         Calendar dateTime = Calendar.getInstance();
         DropoffDate = findViewById(R.id.DropoffDate);
         EnterAddress = findViewById(R.id.EnterAddress);
+        orders=0;
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -224,6 +226,7 @@ public class PickupActivity extends AppCompatActivity {
         valuefinal += " toTake: " + toTake;
         myRef.child("Scheduled").child(userName).setValue(valuefinal);
         valuefinal="";
+        orders=orders+1;
         makeToast("Pickup Confirmed");
         Intent intent1 = new Intent(getApplicationContext(), MenuActivity.class);
         startActivity(intent1);
