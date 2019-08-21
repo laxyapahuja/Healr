@@ -30,7 +30,7 @@ public class MediActivity extends AppCompatActivity implements AdapterView.OnIte
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Spinner spinner = (Spinner) findViewById(R.id.spinnerdrug);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-        R.array.drugs_array, android.R.layout.simple_spinner_item);
+        R.array.drugs_array, R.layout.dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);

@@ -26,11 +26,10 @@
         android:layout_below="@id/healr_pickup"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:background="@drawable/adddrugimg"
-        android:fontFamily="@font/productsans"
+        android:fontFamily="@font/productsans_bold"
         android:text="Add Drug(s)"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp" />
+        android:textColor="#000"
+        android:textSize="28dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -39,27 +38,21 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="18dp"
         android:background="#ffffff" />
-
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@id/add_drug_remind"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/arrow" />
-
     <Spinner
-        android:id="@+id/spinnerdrugremind"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_below="@id/add_drug_remind"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:backgroundTint="#000"
+        android:layout_height="60dp"
         android:gravity="center"
-        android:popupBackground="#000000"
-        android:spinnerMode="dropdown"></Spinner>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/add_drug_remind"
+        android:layout_margin="20dp"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@color/colorPrimaryDark"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:popupElevation="@dimen/cardview_default_elevation"
+        android:id="@+id/spinnerdrugremind">
+    </Spinner>
 
     <TextView
         android:id="@+id/expirationtxt"
@@ -68,12 +61,11 @@
         android:layout_below="@id/spinnerdrugremind"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/expirytxt"
         android:textAlignment="center"
         android:fontFamily="@font/productsans"
         android:text="Expiration Date"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp" />
+        android:textColor="#000"
+        android:textSize="28dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -88,7 +80,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="330dp"
+            android:layout_marginTop="360dp"
             android:hint="mm/yy"
             android:paddingStart="10dp"
             android:textColorHint="@color/colorPrimaryDark"
@@ -116,14 +108,13 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#ffff"
+        android:backgroundTint="@color/colorPrimary"
         android:elevation="7dp"
         android:text="Set Reminder"
         android:layout_marginTop="30dp"
         android:layout_below="@id/lin"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#fff"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/setreminderbtn"
         android:onClick="goToAddress"
         android:id="@id/expirationtxt"/>
 

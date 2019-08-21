@@ -2,7 +2,7 @@
     <string name="app_name">Healr</string>
     <string name="title_activity_maps">Map</string>
     <string-array name="drugs_array">
-        <item>Select Item</item>
+        <item>Medicine(s)</item>
         <item>Blister Pack</item>
         <item>Medicine Bottle</item>
         <item>Paracetamol</item>
